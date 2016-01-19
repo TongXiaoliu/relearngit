@@ -31,5 +31,7 @@ grep -E 'for|if'         找出包含for或if的行
 grep "\(l..e).*\1"       查找le中间包含任意2个字符的行
 grep -C                  查看总行号
 
-
-
+awk：
+词、字的统计： awk '{for(i=1;i<=NF;i++) a[$i]++} END {for(k in a) print k,a[k]}'
+取出某些特定的字段：awk '{print "read"}' 1.txt
+                   awk '{print $1,$2}' 1.txt
